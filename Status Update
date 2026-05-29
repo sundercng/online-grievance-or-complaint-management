@@ -1,0 +1,20 @@
+<?php
+include 'db.php';
+
+$id = $_POST['id'];
+$status = $_POST['status'];
+
+$sql = "UPDATE complaints
+SET status='$status'
+
+WHERE complaint_id='$id'";
+
+if ($conn->query($sql)) {
+
+    header("Location: admin_dashboard.php");
+
+} else {
+
+    echo "Error updating";
+}
+?>
