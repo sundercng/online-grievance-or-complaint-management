@@ -1,0 +1,23 @@
+<?php
+session_start();
+include 'db.php';
+
+$user_id = $_SESSION['user_id'];
+
+$title = $_POST['title'];
+$description = $_POST['description'];
+
+$sql = "INSERT INTO complaints
+(user_id, title, description)
+
+VALUES ('$user_id', '$title', '$description')";
+
+if ($conn->query($sql)) {
+
+    echo "Complaint submitted successfully";
+
+} else {
+
+    echo "Error";
+}
+?>
