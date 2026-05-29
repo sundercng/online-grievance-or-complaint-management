@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>User Registration</h2>
+
+<form action="register.php" method="POST" onsubmit="return validateForm()">
+    <input type="text" name="name" placeholder="Name" required><br>
+
+    <input type="email" name="email" placeholder="Email" required><br>
+
+    <input type="password" name="password" id="password"
+    placeholder="Password" required><br>
+
+    <button type="submit">Register</button>
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>
